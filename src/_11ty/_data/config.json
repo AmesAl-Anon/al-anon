@@ -1,0 +1,53 @@
+{
+  "title": "Ames Iowa Al-Anon Meetings",
+  "url": "/",
+  "domain": "https://AmesAl-Anon.github.org",
+  "language": "es",
+  "logoUrl": "/_images/Al-Anon-logo.jpg",
+  "search": true,
+  "googleAnalyticsID": "",
+
+  "navbarMenu": [
+    {
+      "anchor": "Monday Newcomers",
+      "url": "/Monday/"
+    },
+    {
+      "anchor": "Tuesday",
+      "url": "/Tuesday/"
+    },
+    {
+      "anchor": "Wednesday",
+      "url": "/Wednesday/"
+    },
+    {
+      "anchor": "Thursday",
+      "url": "/Thursday/"
+    },
+    {
+      "anchor": "Thursday Adult Children",
+      "url": "/Thursday-Adult-Child/"
+    },
+    {
+      "anchor": "Saturday",
+      "url": "/Saturday/"
+    }
+  ],
+  "navbarButtons": [
+    {
+      "anchor": "All Ames",
+      "class": "is-small is-danger",
+      "url": "/AmesIowaAl-AnonMeetingsList/"
+    }
+  ],
+  "social": {
+    "iowaAlAnon": "https://iowa-al-anon.org/",
+    "wso": "https://Al-Anon.org",
+    "facebook": "https://www.facebook.com/AlAnonFamilyGroupsWSO/",
+    "twitter": "https://x.com/alanon_wso",
+    "instagram": "https://www.instagram.com/alanon_wso/"   
+  },
+  "showDate": true,
+  "showRelatedMeetings": false,
+  "relatedPostsTitle": "Related Ames Iowa Al-Anon Meetings"
+}

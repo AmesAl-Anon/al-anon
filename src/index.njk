@@ -1,0 +1,28 @@
+---
+layout: index_layout.njk
+title: Al-Anon meetings Ames Iowa
+description: Find an Al-Anon meeting in Ames Iowa USA. Al-Anon is a support group for friends and family members of alcoholics. Many meetings are held weekly in Ames Iowa USA.
+eleventyExcludeFromCollections: true
+pagination:
+  data: collections.sortedPosts
+  size: 7
+  alias: items
+---
+<section class="section is-flex-grow-1">
+  <div class="container">
+    <div class="columns is-variable is-5-desktop is-multiline is-mobile">
+      {% for item in items %}
+        <div class="column is-one-third-tablet is-full-mobile mb-5">
+          {% include "tarjetaCard.njk" %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="columns">
+      <div class="column has-text-centered">
+        {% include "pagination.njk" %} {# Pagination puts the 2 arrows and allows for  #}
+      </div>
+    </div>
+
+  </div>
+</section>

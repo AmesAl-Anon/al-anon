@@ -1,0 +1,58 @@
+<footer class="section has-background-warning has-text-white">
+  <div class="container">
+    <div class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <p class="has-text-centered-mobile">
+     
+    {% if config.showDate %} {# see config.js for showDate setting. If true, it will show the last modified date of the page. #}  
+      <p>
+      <time class="has-text-grey-dark is-size-7">
+      {# see eleventy.js for LUXON package to handle date formatting. postDate is a filter created in eleventy.js #}
+      This page last updated/published: {{ page.date | postDate }}
+      </time>
+      </p>
+      </p
+    {% endif %}
+
+        </div>
+      </div>
+
+      <div class="level-right">
+        <div class="level-item">
+          <p class="footer-social-icons">
+            {% if config.social.facebook.length > 0 %}
+              <span><a href="{{ config.social.facebook }}" rel="nofollow noreferrer" target="_blank" aria-label="facebook profile link"><span class="icon">{% facebookLightIcon %}</span></a></span>
+            {% endif %}
+            {% if config.social.twitter.length > 0 %}
+              <span><a href="{{ config.social.twitter }}" rel="nofollow noreferrer" target="_blank" aria-label="twitter profile link"><span class="icon">{% twitterLightIcon %}</span></a></span>
+            {% endif %}
+            {% if config.social.instagram.length > 0 %}
+              <span><a href="{{ config.social.instagram }}" 
+              rel="nofollow noreferrer" target="_blank" aria-label="instagram profile link">
+              <span class="icon">{% instagramLightIcon %}</span></a></span>
+            {% endif %}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{% if config.showCookiesAdvice %}
+  {% if config.googleAnalyticsID.length > 0 %}
+    <script> var analyticsID = "{{ config.googleAnalyticsID }}"</script>
+  {% endif %}
+  {% include "cookies-advice.njk" %}
+{% endif %}
+
+<!-- Scripts -->
+{% set js %}
+  {% include "scripts.js" %}
+  {% if config.showCookiesAdvice %}
+    {% include "cookies-advice-script.js" %}
+  {% endif %}
+{% endset %}
+<script>
+  {{ js | jsmin | safe }}
+</script>

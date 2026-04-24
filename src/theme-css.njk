@@ -1,0 +1,13 @@
+---
+permalink: theme.css
+eleventyExcludeFromCollections: true
+---
+{% set css %}
+  {% include "./_css/bulma.css" %}
+  {% include "./_css/custom.css" %}
+{% endset %}
+
+{#In Eleventy, CleanCSS is a library used to minify and optimize CSS files by removing whitespace, comments, and redundant rules, 
+while also performing advanced restructuring like merging duplicate selectors and optimizing media queries.  It is typically 
+integrated into an Eleventy project by adding a custom filter (yep this has been done) that processes CSS content during the build. #}
+{{ css | cssmin | safe }}
